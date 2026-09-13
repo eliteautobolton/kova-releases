@@ -1,0 +1,41 @@
+name: Copyright notice
+description: Report a provider hostname or use of KOVA that may infringe your rights.
+title: "[Copyright] "
+labels:
+  - copyright
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not post passwords, access tokens, full private provider URLs or unnecessary personal information. GitHub issues are public.
+  - type: textarea
+    id: work
+    attributes:
+      label: Copyright work
+      description: Identify the protected film, programme, artwork or other work.
+    validations:
+      required: true
+  - type: input
+    id: hostname
+    attributes:
+      label: Reported provider hostname
+      description: Provide only the hostname where possible, not a credential-bearing URL.
+      placeholder: provider.example
+    validations:
+      required: true
+  - type: textarea
+    id: basis
+    attributes:
+      label: Basis of the report
+      description: Explain your ownership or authority and why the reported use is unauthorised.
+    validations:
+      required: true
+  - type: checkboxes
+    id: statements
+    attributes:
+      label: Statements
+      options:
+        - label: I have a good-faith belief that the reported use is not authorised by the copyright owner, its agent or the law.
+          required: true
+        - label: The information in this notice is accurate and I am the owner or authorised to act for the owner.
+          required: true

@@ -1,0 +1,25 @@
+name: Account data request
+description: Start an access, correction or deletion request without publishing account details.
+title: "[Account data] "
+labels:
+  - privacy
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue is public. Do not post your email address, password, tokens, provider endpoints or viewing history. A maintainer will provide a safer verification step.
+  - type: dropdown
+    id: request
+    attributes:
+      label: Request type
+      options:
+        - Access my data
+        - Correct my data
+        - Delete my account and data
+    validations:
+      required: true
+  - type: textarea
+    id: note
+    attributes:
+      label: Non-sensitive note
+      description: Add only information that is safe to publish publicly.
